@@ -30,6 +30,6 @@ This site runs on a hacked version of Benja-SSG. I have built this project for t
 
 There is no GH Repo for this project yet! Stay Tuned!
 ## About this Site!
-This site was built with Marked & My own Javascript to create a SSG using Markdown Files! You may see HTML but this was generated from a MD File! All of the Generated files are available on Github using the links at the bottom of this page! I did take inspiration from MediaWiki on their use of the `special:` pages (this page is a "special" page), but I am using a different language from them!
+This site was built with Marked & My own Javascript to create a SSG using Markdown Files! You may see HTML but this was generated from a MD File! All of the Generated files are available on Github using the links at the bottom of this page! I did take inspiration from MediaWiki on their use of the `special:` pages (this page is a "special" page), but I am using a different language from them!!
 
 
