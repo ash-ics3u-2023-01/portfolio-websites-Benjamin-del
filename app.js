@@ -14,12 +14,12 @@ const { JSDOM } = jsdom;
 // Map if links have to be maped to the .. or . directory
 function getTldStatus() {
     if (process.argv.includes("-t")) {
-        return "."
+        return "../"
     } else {
-        return ".."
+        return ""
     }
 }
-
+console.log("TLD Status: " + getTldStatus())
 const cssMap = (function() {
     if (config.cssDir) {
         console.log("CSS Directory Configured! Mapping CSS Files")
