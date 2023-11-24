@@ -1,0 +1,28 @@
+.source {
+    margin: 10px;
+    border-left: 4px solid #a30b37;
+    padding: 20px;
+}
+
+.source h4 {
+    margin: 0px;
+    color: #a30b37;
+}
+
+.src {
+    background: #a30b37;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+}

@@ -1,0 +1,17 @@
+{
+    "name": "ict-shsm",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "html-prettify": "^1.0.7",
+        "jsdom": "^22.1.0",
+        "marked": "^10.0.0",
+        "pretty": "^2.0.0"
+    }
+}

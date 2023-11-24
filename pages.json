@@ -1,0 +1,65 @@
+{
+    "info": {
+        "name": "Ben M's Portfolio!",
+        "fallback_auth": "People",
+        "mdDir": "./md",
+        "htmlDir": "./posts",
+        "cssDir": "./styles",
+        "jsDir": "./scripts",
+        "github": "https://github.com/ash-ics3u-2023-01/portfolio-websites-Benjamin-del",
+        "url": "https://benjamin-del.github.io/ICT-SHSM",
+        "customization": {
+            "display_source": true,
+            "content_class": "content",
+            "content_id": "content",
+            "src_link_class": "src",
+            "footer_class": "footer",
+            "footer": "<p>Created by Ben!</p>"
+        },
+        "special": [
+            {
+                "page": "index",
+                "title": "Home"
+            }
+        ],
+        "navbar": {
+            "pre_content": [
+                {
+                    "name": "Interesting Stuff",
+                    "dropdown": [
+                        {
+                            "name": "Github",
+                            "url": "https://github.com/Benjamin-del"
+                        },
+                        {
+                            "name": "My Website",
+                            "url": "https://benjamin-del.github.io/ICT-SHSM"
+                        }
+                    ]
+                }
+            ],
+            "auto_content": true,
+            "post_content": [
+                {
+                    "name": "GitHub Source",
+                    "url": "https://github.com/ash-ics3u-2023-01/portfolio-websites-Benjamin-del"
+                },
+                {
+                    "name": "My GitHub",
+                    "url": "https://github.com/Benjamin-del"
+                }
+            ],
+            "show_title": true,
+            "active_class": "active",
+            "external_class": "external",
+            "navbar_class": "nav"
+        }
+    },
+    "update": "2023-11-24T18:01:29.808Z",
+    "pages": [
+        {
+            "name": "demo",
+            "url": "/posts/demo.html"
+        }
+    ]
+}
