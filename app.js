@@ -11,12 +11,20 @@ const config = require('./config.json');
 const pretty = require('pretty');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
+// Map if links have to be maped to the .. or . directory
+function getTldStatus() {
+    if (process.argv.includes("-t")) {
+        return "."
+    } else {
+        return ".."
+    }
+}
 
 const cssMap = (function() {
     if (config.cssDir) {
         console.log("CSS Directory Configured! Mapping CSS Files")
         const mp = fs.readdirSync(config.cssDir).map((file) => {
-            return `<link rel="stylesheet" href=".${config.cssDir + "/" + file}">`
+            return `<link rel="stylesheet" href="${getTldStatus() + config.cssDir + "/" + file}">`
         })
         return mp.join("\n")
     } else {
@@ -27,7 +35,7 @@ const jsMap = (function() {
     if (config.jsDir) {
         console.log("JS Directory Configured! Mapping JS Files")
         const mp = fs.readdirSync(config.jsDir).map((file) => {
-            return `<script src=".${config.jsDir + "/" + file}"></script>`
+            return `<script src="${getTldStatus() + config.jsDir + "/" + file}"></script>`
         })
         return mp.join("\n")
     } else {
@@ -45,12 +53,14 @@ function toTitleCase(str) {
   }
   
 function getact() {
-    if (process.argv[2] === "-a") {
+    
+    if (process.argv.includes("-a")) {
         return process.argv[3] || config.fallback_auth || "Error"
     } else {
         return config.fallback_auth || "Error"
     }
 }
+
 // Check if in dev mode
 const act = process.argv[2] === "-a" || false
 if (act) {
@@ -63,6 +73,7 @@ if (act) {
 const farr = fs.readdirSync(config.mdDir)
 const pgdt = []
 farr.forEach((file, index, arr) => {
+    const tldPath = getTldStatus()
     // Tell Terminal which file is being worked on
     console.log("Working on file: " + file + " | " + (index + 1) + " of " + arr.length)
     // Create Path to file
@@ -228,7 +239,7 @@ farr.forEach((file, index, arr) => {
 
             // Create raw link
             const raw = document.createElement("a")
-            raw.setAttribute("href", "../" + config.mdDir + "/" + file)
+            raw.setAttribute("href", tldPath + "/" + config.mdDir + "/" + file)
             raw.setAttribute("class",config.customization.src_link_class || "src")
             raw.innerHTML = "View Raw Source"
 
